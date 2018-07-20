@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Your Site Speaks What Language? Don't Keep Screen Readers Guessing!</title>
+    <meta name='description' content="A demo Website containing Screen Reader Demo Pages. It demonstrates the importance of telling Screen Readers what language to read your Web pages in.">
+    <meta name='keywords' content='accessibility,screen reader,language,lang,wcag,w3c,html,website,demo,nvda,free,windows,english,spanish'>
+    <meta name='date' content='2018-07-19'>
+    <meta name='last-modified' content='2018-07-19'>
+    <meta name='author' content='Russell Johnson (russelljqa.site)'>
+    <meta name='copyright' content="2018 Russell Johnson. All rights reserved.">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='./style.css'>
+</head>
+
+<body>
+
+    <header role='banner'>
+        <h1>Your Site Speaks What Language? Don't Keep Screen Readers Guessing!</h1>
+        <nav role='navigation'>
+            <ul>
+                <li>
+                    <a class='current-page' href='./index.html'>Home</a>
+                </li>
+                <li>
+                    <a href='./english-no-lang.html'>English: No lang</a>
+                </li>
+                <li>
+                    <a href='./espanol-no-lang.html'>Spanish: No lang</a>
+                </li>
+                <li>
+                    <a href='./espanol-lang-es.html'>Spanish: lang='es'</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id='main_content' role='main' tabindex='-1'>
+        <div class='page'>
+
+            <p>If you don't specify a language for your Web pages, it can confuse Screen Readers and other Assistive Technology.
+                I built this demo Web site to demonstrate the problem. The site's HTML source code is available here on
+                <a href='https://github.com/RussellJQA/your-site-speaks-what-language/' target='_blank' title="Opens in a new window."
+                    aria-label="GitHub: Opens in a new window">GitHub</a>. This is the site's home page, and is essentially the same as <a href='https://www.russelljqa.site/blog/your-site-speaks-what-language/' target='_blank' title="Opens in a new window." aria-label="this blog post: Opens in a new window">this blog post</a>, except that it's followed by 3 demo pages:</p>
+            <ol>
+                <li>
+                    <a href='https://russelljqa.github.io/your-site-speaks-what-language/english-no-lang.html' target='_blank' title="Opens in a new window."
+                        aria-label=" English: No lang: Opens in a new window"> English: No lang</a> — This demo page is written in English. But I intentionally omitted an HTML
+                    <code>lang</code> attribute. As a result, Screen Readers have to guess what language to use. An English Screen
+                    Reader guesses it's in English, which in this case is right.
+                </li>
+                <li>
+                    <a href='https://russelljqa.github.io/your-site-speaks-what-language/espanol-no-lang.html' target='_blank' title="Opens in a new window."
+                        aria-label="Spanish: No lang: Opens in a new window">Spanish: No lang</a> — This page is a Spanish translation of the previous page. Again, I intentionally
+                    omitted an HTML
+                    <code>lang</code> attribute. As a result, Screen Readers still have to guess what language to use. An English
+                    Screen Reader guesses it's in English, but in this case that's wrong. It pronounces the Spanish words
+                    as if they were English, and reads the numbers as English.
+                </li>
+                <li>
+                    <a href='https://russelljqa.github.io/your-site-speaks-what-language/espanol-lang-es.html' target='_blank' title="Opens in a new window."
+                        aria-label="Spanish: lang='es': Opens in a new window">Spanish: lang='es'</a> — This Web page is identical to the previous one, except that this time, I gave
+                    it an HTML
+                    <code>lang</code> attribute of
+                    <code>lang='es'</code>. The
+                    <code>'es'</code> is for Español, which is Spanish for "Spanish". No more guessing for Screen Readers. Realizing
+                    the page is in Spanish, they pronounce it as Spanish, and read the numbers as Spanish.
+                </li>
+            </ol>
+            <p>
+                <a href='' target='_blank' title="Focus Order: Opens in a new window." aria-label="Opens in a new window"></a>
+            </p>
+            <h3>Why is using the HTML 'lang' attribute important?</h3>
+            <p>Assistive Technology (AT) such as Screen Readers, Speech Synthesizers, and Braille Translators need to know what
+                language a page is in, to speak or display it properly. The World Wide Web Consortium (W3C) Web Content Accessibility
+                Guidelines
+                <a href='https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0' target='_blank' title="Focus Order: Opens in a new window."
+                    aria-label="(WCAG) 2.0: Opens in a new window">(WCAG) 2.0</a>
+                include the need to do this a
+                <strong>Level AA</strong> guideline. (
+                <strong>Level AA</strong> means a Website "must do" this to be considered accessible.) WCAG 2.0 calls this guideline
+                <a href='https://www.w3.org/WAI/WCAG21/Understanding/language-of-page' target='_blank' title="Opens in a new window." aria-label="Success Criterion 3.1.1: Language of Page: Opens in a new window">Success Criterion 3.1.1: Language of Page</a>. Adhering to such guidelines is a legal requirement for many
+                Websites worldwide.</p>
+            <p>Knowing a Web page's language is important for areas other than Accessibility as well. Some search engines let
+                users restrict search results to those of a specific language. Web browsers use different default fonts depending
+                upon what language content is in. They use different fonts for Chinese, Japanese, and Korean than those they
+                use for English. Spelling and grammar checkers need to know what language content is in, as do translation
+                services. For more information, see the following 2 World Wide Web Consortium's articles on Internationalization:
+                <a href='https://www.w3.org/International/questions/qa-lang-why' target='_blank' title="Opens in a new window." aria-label="Why use the language attribute?: Opens in a new window">Why use the language attribute?</a>
+                and
+                <a href='https://www.w3.org/International/questions/qa-css-lang' target='_blank' title="Opens in a new window." aria-label="Styling using language attributes: Opens in a new window">Styling using language attributes</a>.</p>
+            <h3>You can see and hear the importance of this first-hand</h3>
+            <p>One of the best ways of doing so is with a Screen Reader.
+                <a href='https://en.wikipedia.org/wiki/Microsoft_Narrator' target='_blank' title="Opens in a new window." aria-label="Microsoft Narrator: Opens in a new window">Microsoft Narrator</a>
+                comes free with Windows, and
+                <a href='https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en' target='_blank' title="Opens in a new window."
+                    aria-label="ChromeVox: Opens in a new window">ChromeVox</a>
+                is a free extension for Google Chrome. But neither is a full featured Screen Reader, and the announcing in both seems unaffected
+                by the HTML language attribute.
+                <a href='https://www.nvaccess.org' target='_blank' title="Opens in a new window." aria-label="NVDA: Opens in a new window">NVDA</a>
+                (NonVisual Desktop Access), on the other hand, is a free, full featured Windows Screen Reader which handles this correctly.
+                NVDA works best with Mozilla Firefox, so the following video uses NVDA with Firefox, on a "U.S. English"
+                version of Windows (8.1), with NVDA's language set to "English".</p>
+            <p>
+                <h4 id='video' tabindex='0'>Video</h4>
+            </p>
+            <video controls style='width:100%; max-width:1366px' title="your-site-speaks-what-language Demo Web site, with the language of NVDA set to English">
+                <source src='your-site-speaks-what-language.mp4' type='video/mp4'>
+                <img src='your-site-speaks-what-language.png' style='width:100%; max-width:852px' alt="your-site-speaks-what-language Demo Web site, with the language of NVDA set to English">
+            </video>
+            <p>
+                <br>
+            </p>
+            <h3>How do you use the 'lang' attribute?</h3>
+            <p>It's easy to specify what language your Web page is written in. Just add the
+                <code>lang</code> attribute, with the appropriate language code, to the end of your initial
+                <code>&lt;html&gt;</code> tag. For example, to specify English as the language of your Web page, you simply replace:</p>
+            <p>
+                <blockquote>
+                    &lt;html&gt;
+                </blockquote>
+                with:</p>
+            <p>
+                <blockquote>
+                    &lt;html lang='en'&gt;
+                </blockquote>
+                For languages other than English, see the ISO 639-1 Codes listed in the U.S. Library of Congress's
+                <a href='https://www.loc.gov/standards/iso639-2/php/code_list.php' target='_blank' title="Opens in a new window." aria-label="Codes for the Representation of Names of Languages: Opens in a new window">Codes for the Representation of Names of Languages</a>
+                or Wikipedia's
+                <a href='https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes' target='_blank' title="Opens in a new window." aria-label="List of ISO 639-1 codes: Opens in a new window">List of ISO 639-1 codes</a>.</p>
+            <h3>What if just some of your Web Page is in a different language?</h3>
+            <p>
+                The W3C's WCAG 2.0 Guidelines include a
+                <strong>Level AA</strong> ("should have") guideline for this. It's
+                <a href='https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts' target='_blank' title="Opens in a new window." aria-label="Success Criterion 3.1.2: Language of Parts: Opens in a new window">Success Criterion 3.1.2: Language of Parts</a>. Adhering to
+                <em>AA</em> guidelines is also a legal requirement for many Websites worldwide. The details of the
+                <em>Language of Parts</em> guideline are beyond the scope of this blog post. But you can read more about it in
+                Maxability's
+                <a href='http://www.maxability.co.in/2015/02/3-1-2-language-parts/' target='_blank' title="Opens in a new window." aria-label="3.1.2 Language of Parts: Opens in a new window">3.1.2 Language of Parts</a>, Lane Community College's
+                <a href='https://blogs.lanecc.edu/webteam/2017/01/31/understanding-wcag-2-0-3-1-2-language-of-parts/' target='_blank' title="Opens in a new window."
+                    aria-label="Understanding WCAG 2.0: 3.1.2 – Language of Parts: Opens in a new window">Understanding WCAG 2.0: 3.1.2 – Language of Parts</a>
+                or the W3C's own
+                <a href='https://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-other-lang-id.html' target='_blank' title="Opens in a new window."
+                    aria-label="Understanding Success Criteria 3.1.2: Opens in a new window">Understanding Success Criteria 3.1.2</a>
+            </p>
+        </div>
+    </main>
+    <footer>
+        <br>&copy; Copyright 2018 by Russell J.</footer>
+</body>
+
+</html>

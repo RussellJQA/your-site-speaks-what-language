@@ -1,0 +1,4 @@
+header nav ul li { display: inline; margin: 0 8px 0 0; padding: 0; }
+.current-page { pointer-events: none; cursor: default; text-decoration: none; color: black; }
+ ol { line-height: 150% }
+ blockquote, code { background: #FFF8DC; font-family: monospace; }
